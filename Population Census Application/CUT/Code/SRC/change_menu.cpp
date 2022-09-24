@@ -31,8 +31,27 @@ class Change : public Authenticate
 					if(a->get_password() == pwd)
 					{
 						string new_id;
-						cout<<"Enter New Admin ID to change"<<endl;
-						cin>>new_id;
+						while(1)
+						{
+							int flag = 0;
+							cout<<"Enter New Admin ID to change"<<endl;
+							cin>>new_id;
+
+							for(list<Authenticate> :: iterator a = aut.begin(); a!= aut.end(); a++)
+							{
+								if(a->get_admin_id() == new_id)
+								{
+									cout<<endl<<new_id<<" already exists, Please give another id!"<<endl;
+									flag = 1;
+									break;
+								}
+							}
+							if(flag == 0)
+							{
+								break;
+							}
+						}
+
 						a->put_admin_id(new_id);
 						cout<<endl<<"Admin ID changed Successfully!"<<endl<<endl;
 						system("read n");
@@ -54,9 +73,11 @@ class Change : public Authenticate
 			return EXIT_FAILURE;
 
 		}
-/ **********************************************************************************************************************************************************************************
+/**********************************************************************************************************************************************************************************
 * FUNCTION NAME   :   change_password
-* DESCRIPTION     :   This function is used for authentication of admin id .if he enters wrong password or to forget he used to change the pervious to new password then function
+* DESCRIPTION     :   This function is used for authentication of admin id .if he enters wrong 
+* 		      password or to forget he used to change the pervious to new password then
+* 		      function
 *                      returns 1
 * RETURN          :   Return 1 if successful
 * ********************************************************************************************************************************************************************************
