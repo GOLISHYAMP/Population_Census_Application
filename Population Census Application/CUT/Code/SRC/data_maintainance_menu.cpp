@@ -3,12 +3,19 @@
 #include "class.hpp"
 using namespace std;
 
+/**********************************************************************************************************************************************************************************
+*  FUNCTION NAME :   citizen data view.
+*  DESCRIPTION   :   This function is used for to see/view citizen data is exists or not. then this function returns 1. 
+*  RETURN        :   Return 1 if successful.
+*
+* *******************************************************************************************************************************************************************************
+* */
+
 int Citizen_Data_View()
 {
 	string s;
 	cout<<"Enter the ssid : "<<endl;
 	cin>>s;
-	cout<<endl<<"I am in View function"<<endl;
 	for(list<Citizen> :: iterator c=li.begin(); c!=li.end(); c++)
 	{
 		if(c->ret_ssid() == s)
@@ -23,9 +30,17 @@ int Citizen_Data_View()
 	return EXIT_FAILURE;
 }
 
+/************************************************************************************************************************************************************************
+*  FUNCTION NAME :    citizen data delete.
+*  DESCRIPTION   :    This function is used for to see citizen data is deleted or not.then this returns 1.
+*  RETURN        :    Return 1 if successful.
+*
+* **********************************************************************************************************************************************************************
+* */
+
+
 int Citizen_Data_Delete()
 {
-	cout<<endl<<"I am in Delete function"<<endl;
 	string s;
 	cout<<"Enter the ssid : "<<endl;
 	cin>>s;
@@ -63,9 +78,16 @@ int Citizen_Data_Delete()
 
 }
 
+/**********************************************************************************************************************************************************************
+*      FUNCTION NAME :  citizen data modify.
+*      DESCRIPTION   :  This function is used for to see citizen data is modified or not.then this function returns 1.
+*      RETURN        :  Return 1 if successful.
+*
+* *********************************************************************************************************************************************************************
+* */
+
 int Citizen_Data_Modify()
 {
-	cout<<endl<<"I am in Modify function"<<endl;
 	string s;
 	cout<<"Enter the ssid : "<<endl;
 	cin>>s;

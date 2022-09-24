@@ -2,6 +2,13 @@
 #include <iostream>
 #include<string>
 using namespace std;
+/***************************************************************************************************************************************************************
+*  FUNCTION NAME : change_id
+*  DESCRIPTION   : This function is used for authentication of  admin id. if enters the credentials wrong it used to change admin id then function returns 1
+*  RETURN        : Return 1 if successful
+*
+* *************************************************************************************************************************************************************
+* */
 
 class Change : public Authenticate
 {
@@ -47,6 +54,14 @@ class Change : public Authenticate
 			return EXIT_FAILURE;
 
 		}
+/ **********************************************************************************************************************************************************************************
+* FUNCTION NAME   :   change_password
+* DESCRIPTION     :   This function is used for authentication of admin id .if he enters wrong password or to forget he used to change the pervious to new password then function
+*                      returns 1
+* RETURN          :   Return 1 if successful
+* ********************************************************************************************************************************************************************************
+* */
+
 		int Change_password()
 		{
 			string id;

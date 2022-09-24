@@ -1,3 +1,18 @@
+/*
+ * **************************************************************************************************
+ * *      FILENAME            :             main_menus.cpp
+ *
+ * *      DESCRIPTION         : 	    This file contains of the main menu which will be seen as                                             as soon as the program gets executed. It contains zone
+ * 					    wise registration function definition and central 
+ * 					    representative function definition.
+ *
+ *    Revision History   :
+ *    DATE		NAME		REASON
+ *    ----------------------------------------------------------------------------------------------
+ *    12 SEP 2022	cguser1		Showing the menus options of zone and central representative
+
+ ***************************************************************************************************
+*/
 #include<iostream>
 #include<string>
 #include<thread>
@@ -6,13 +21,22 @@
 #include "central_rel.cpp"
 using namespace std;
 
+/*****************************************************************************************************
+ *    FUNCTION NAME   :   Dynaland_Zone_Wise_Registration
+ *    DESCRIPTION     :   This function shows the in detailed menu of zone representative. So the 
+ *    			  zone representative can get into that zone registration.
+ *    RETURN	      :   void
+ *
+ * **************************************************************************************************
+ * */
+
 void Dynaland_Zone_Wise_Registration()
 {
-	system("clear");
-	//	int (*p[3])() = {Zone_1_Citizen_Register, Zone_2_Citizen_Register, Zone_3_Citizen_Register};
+		int (*p[3])() = {Zone_1_Citizen_Register, Zone_2_Citizen_Register, Zone_3_Citizen_Register};
 	string ch = "a";
 	while(ch != "4")
 	{
+	system("clear");
 		cout<<endl<<endl<<"---------  Please select the Zone of Citizen Registration ----------"<<endl<<endl;
 		cout<<endl<<"1. Zone 1 citizen registration"<<endl<<"2. Zone 2 citizen registration"<<endl<<"3. Zone 3 citizen registration"<<endl<<"4. <-Back to Main Menu"<<endl;
 
@@ -56,7 +80,6 @@ void Dynaland_Zone_Wise_Registration()
 				throw ch;
 			}
 
-			/*
 			   if(stoi(ch)<1 || stoi(ch)>4)
 			   {
 			   cout<<"Invalid Input"<<endl;
@@ -67,28 +90,8 @@ void Dynaland_Zone_Wise_Registration()
 			   {	
 			   break;
 			   }}
-			//	p[stoi(ch)-1]();     // function call;
-
-			thread th(&p[stoi(ch)-1],NULL);
+			thread th(p[stoi(ch)-1]);
 			th.join();
-			string temp;
-			getline(cin,temp);
-			*/
-			switch(ch[0])
-			{
-				case '1' : {thread th1(Zone_1_Citizen_Register);
-					   th1.join();}
-					   break;
-				case '2' : {thread th2(Zone_2_Citizen_Register);
-					   th2.join();}
-					   break;
-				case '3' : {thread th3(Zone_3_Citizen_Register);
-					   th3.join();}
-					   break;
-				case '4' : break;
-				default: cout<<"Invalid Input"<<endl;
-
-			}
 			string temp;
 			getline(cin,temp);
 		}	
@@ -103,6 +106,17 @@ void Dynaland_Zone_Wise_Registration()
 }
 
 int login_page();
+
+
+/*****************************************************************************************************
+ *    FUNCTION NAME   :   Dynaland_Central_Registration
+ *    DESCRIPTION     :   This function shows the in detailed menu of Central representative. So the 
+ *    			  Central representative can work on the data.
+ *    RETURN	      :   void
+ *
+ * **************************************************************************************************
+ * */
+
 
 void Dynaland_Central_Representative()
 {
@@ -191,9 +205,18 @@ void Dynaland_Central_Representative()
 		getline(cin,temp);
 	}
 	system("clear");
-	//aut.clear();
 	
 }
+
+
+/*****************************************************************************************************
+ *    FUNCTION NAME   :   login_page
+ *    DESCRIPTION     :   This function is used for authentication of central representative. If the 
+ *    			  if representative enters correct credentials then function returns 1.
+ *    RETURN	      :   Return 1 if successful
+ *
+ * **************************************************************************************************
+ * */
 
 int login_page()
 {

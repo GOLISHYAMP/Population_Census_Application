@@ -24,11 +24,13 @@ class testdr: public CppUnit::TestFixture
 	CPPUNIT_TEST_SUITE(testdr);
 	CPPUNIT_TEST(test_check_ssid);
 	CPPUNIT_TEST(test_check_gender);
+	CPPUNIT_TEST(test_check_name);
 	CPPUNIT_TEST_SUITE_END();
 	
 	protected:
 		void test_check_ssid(void);
 		void test_check_gender(void);
+		void test_check_name(void);
 };
 
 void testdr::test_check_ssid(void)
@@ -45,6 +47,14 @@ void testdr::test_check_gender(void)
 	CPPUNIT_ASSERT(1==check_gender("F"));
 	CPPUNIT_ASSERT(0==check_gender("vdf"));
 	CPPUNIT_ASSERT(1==check_gender("4654")); // to be failed
+}
+void testdr::test_check_name(void)
+{
+	CPPUNIT_ASSERT(0==check_name(""));
+	CPPUNIT_ASSERT(1==check_name("	")); // to be failed
+	CPPUNIT_ASSERT(1==check_name("krishna"));
+	CPPUNIT_ASSERT(1==check_name("4654")); // to be failed
+	CPPUNIT_ASSERT(0==check_name("Shyam123")); 
 }
 
 

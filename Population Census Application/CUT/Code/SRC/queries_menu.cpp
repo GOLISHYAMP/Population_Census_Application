@@ -1,3 +1,16 @@
+/******************************************************************************************************************************************
+** FILENAME          :    queries.cpp
+**
+** DESCRIPTION       :    This file contains all the function definations that are used to check the count of highest percentage of literacy
+                          rate according to zone wise and highest percentage of males,females and transgender according to zone wise and 
+			  also for checking below poverty line according to zone wise.
+**
+** REVISION HISTORY  :    
+**   DATE             NAME              REASON
+**-----------------------------------------------------------------------------------------------------------------------------------------
+** 20 SEP 2022        Username         Creation of File,Writing Functions definations.
+**
+*******************************************************************************************************************************************/
 #include<iostream>
 #include<map>
 #include<string>
@@ -6,13 +19,21 @@
 #include "class.hpp"
 using namespace std;
 
+//------------------------------Literacy Rate--------------------------------------//
+/*******************************************************************************************************************************************
+**
+** FUNCTION NAME  : Literacy_Rate.
+** DESCRIPTION    : This function checks the count of the literacy rate by calculating the total number of literates by total population.
+** RETURN         : void
+**
+*******************************************************************************************************************************************/
+
 class Query
 {
 	public:
 void Literacy_Rate()
 {
 	
-	cout<<"I am in Literacy rate"<<endl;
 	// traverse through list
 	// check literate == "YES"  increase literate_count variable
 	int total_pop = 0, total_l = 0;
@@ -33,15 +54,24 @@ void Literacy_Rate()
 
 }
 
+//--------------------------------------------Zone with highest literacy ----------------------------------------//
+/*******************************************************************************************************************************************
+**
+** FUNCTION NAME : Zone_with_highest_literacy.
+** DESCRIPTION   : This function checks the highest literacy rate according to zone wise by calculating the zone wise literates by total 
+                   population in zone.
+** RETURN        : void
+**
+*******************************************************************************************************************************************/
+
 void Zone_with_highest_literacy()
 {
-	cout<<"I am in zone with highest literacy"<<endl;
 	/*
         int z1_pop = 0, z2_pop = 0, z3_pop = 0;
         int z1_l = 0, z2_l = 0, z3_l = 0;
 	*/
 	vector<int>z_pop;
-	vector<int>z_lit;
+	vector<int>z_lit; 
 	z_pop.assign(3,0); // inserting 3 elements of 0
 	z_lit.assign(3,0); // inserting 3 elements of 0
 
@@ -116,10 +146,17 @@ void Zone_with_highest_literacy()
 
 
 }
+//--------------------------------------BPL average income----------------------------------//
+/******************************************************************************************************************************************
+**
+** FUNCTION NAME  : BPL_average_income.
+** DESCRIPTION    : This function checks the average annual income of population below poverty line in dynaland.
+** RETURN         : void
+**
+******************************************************************************************************************************************/
 
 void BPL_average_income()
 {
-	cout<<"I am in BPL average income"<<endl;
 /*
 	int total_pop = 0;
 	int total_BPL = 0;
@@ -145,9 +182,18 @@ void BPL_average_income()
 
 }
 
+//----------------------------------------Rural and urbal population---------------------------//-
+/*****************************************************************************************************************************************
+**
+** FUNCTION NAME  : Rural_and_Urban_Population.
+** DESCRIPTION    : This function checks the Percentage of population living in rural and urban by calculating the rural and urban by total 
+                    population.
+** RETURN         : void
+**
+******************************************************************************************************************************************/
+
 void Rural_and_Urban_Population()
 {
-	cout<<"I am in Rural and urban population"<<endl;
 /*
 	int total_pop = 0;
         int r_pop = 0;
@@ -178,10 +224,17 @@ void Rural_and_Urban_Population()
 
 
 }
-
+/*-----------------------------------------Zone with highest male and female-----------------------------//
+******************************************************************************************************************************************
+**
+** FUNCTION NAME  : Zone_with_highest_male_and_female
+** DESCRIPTION    : This function checks the highest percentage of males,females and transgender by calculating in zone wise.
+** RETURN         : void
+**
+*******************************************************************************************************************************************
+*/
 void Zone_with_highest_male_and_female()
 {
-	cout<<"I am in zone with highest male and female"<<endl;
 	/*
 	int z1_pop = 0, z2_pop = 0, z3_pop = 0;
         int z1_m = 0, z2_m = 0, z3_m = 0;
@@ -214,6 +267,7 @@ void Zone_with_highest_male_and_female()
 			else if(c.gender == "female")
 			{
 				m["zone1"][1]++;
+
 			}
 			else
 			{
@@ -313,6 +367,7 @@ void Zone_with_highest_male_and_female()
 	//  comparing for females
 	if(p1[1] >= p2[1] || std::isnan(p2[1]))
         {
+		
                 if(p1[1]>=p3[1] || std::isnan(p3[1]))
                 {
                         cout<<"The Zone With Highest percentage of females "<<p1[1]<<" %"<<" is Zone 1"<<endl;

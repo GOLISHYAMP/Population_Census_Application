@@ -1,13 +1,35 @@
-#include "class.hpp"
+/****************************************************************************************************
+**      FILENAME      :       class_functions.cpp
+**
+**    DESCRIPTION     :       This File contains all the member functions definitions of class citizen
+**			      that are used to create , view and modify the citizen details.
+**                            view , and modify 
+**
+** Revision History   :
+** DATE                NAME                   REASON
+**---------------------------------------------------------------------------------------------------
+**13 SEP 2022        cguser20            Creation of File , Writing Function definitions.
+**
+*******************************************************************************************************/
 #include "validation_file.cpp"
+#include "class.hpp"
 #include<iostream>
 #include<string>
 using namespace std;
 
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Citizen_Data_Create
+**    DESCRIPTION     :    This function creates the database for Citizen containing ssid,name,age,gender,
+**                         annual income,occupation,house type,etc.
+**    RETURN          :    Void.. 
+**
+*********************************************************************************************************/
 void Citizen::Citizen_Data_Create(string zid)
 {
 	//create
+	system("clear");
 	zone_id = zid;
 	while(1)
 	{
@@ -204,6 +226,13 @@ void Citizen::Citizen_Data_Create(string zid)
 	
 }
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Citizen_Data_View
+**    DESCRIPTION     :    This function is for displaying the Citizen data.
+**    RETURN          :    Void. 
+**
+*********************************************************************************************************/
 void Citizen::Citizen_Data_View()
 {
 	//view
@@ -230,6 +259,14 @@ void Citizen::Citizen_Data_View()
 }
 
 
+/*****************************************************************************************************************
+**
+**    FUNCTION NAME   :    Citizen_Data_Modify
+**    DESCRIPTION     :    This function is used to modify the database for Citizen containing ssid,name,age,gender,
+**                         annual income,occupation,house type,etc.
+**    RETURN          :    Void.. 
+**
+*******************************************************************************************************************/
 
 void Citizen::Citizen_Data_Modify(string ch)
 {
@@ -246,6 +283,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,zone_id); 
 			if(check_zoneid(zone_id)==1)
 			{
+				cout<<endl<<"Zone id updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}
@@ -262,6 +301,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,name); 
 			if(check_name(name)==1)
 			{   
+				cout<<endl<<"Name is updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -279,6 +320,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,age); 
 			if(check_age(age)==1)
 			{   
+				cout<<endl<<"Age is updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -307,6 +350,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			}
 			else
 			{
+				cout<<endl<<"Address updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}
@@ -333,6 +378,8 @@ void Citizen::Citizen_Data_Modify(string ch)
                                   literate = "YES";
                           }
 
+				cout<<endl<<"Qualification updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -350,6 +397,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,occupation); 
 			if(check_occupation(occupation)==1)
 			{   
+				cout<<endl<<"Occupation updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -367,6 +416,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,annual_income);
 			if(check_annual_income(annual_income)==1)
 			{   
+				cout<<endl<<"Annual income updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -384,6 +435,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			getline(cin,no_of_dependants); 
 			if(check_dependants(no_of_dependants)==1)
 			{   
+				cout<<endl<<"Number of dependants updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -409,6 +462,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			{
 				house_type = "rented";
 			}
+				cout<<endl<<"House type is updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -436,6 +491,8 @@ void Citizen::Citizen_Data_Modify(string ch)
 			{
 				area_type = "urban";
 			}
+				cout<<endl<<"Area type is updated successful"<<endl;
+				system("read n");
 				system("clear");
 				break;
 			}   
@@ -446,6 +503,14 @@ void Citizen::Citizen_Data_Modify(string ch)
 }
 
 
+/******************************************************************************************************************
+**
+**    FUNCTION NAME   :    Citizen_Initial_Create
+**    DESCRIPTION     :    This function Initially creates the database for Citizen containing ssid,name,age,gender,
+**                         annual income,occupation,house type,etc.
+**    RETURN          :    Void.. 
+**
+********************************************************************************************************************/
 void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
 {
 	zone_id = id;

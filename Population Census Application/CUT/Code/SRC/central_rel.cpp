@@ -1,3 +1,14 @@
+/**********************************************************************************************************************
+**      FILENAME      :       central_rel.cpp
+**
+**    DESCRIPTION     :       This File contains all the data related to central command like change ID and password
+**                            and Data maintainance also contains menu lists for various reports and queries.
+** Revision History   :
+** DATE                NAME                   REASON
+**---------------------------------------------------------------------------------------------------
+**12 SEP 2022        cguser1            Creation of File , Writing Function definitions.
+**
+***********************************************************************************************************************/
 #include<iostream>
 #include "change_menu.cpp"
 #include "data_maintainance_menu.cpp"
@@ -5,6 +16,14 @@
 #include "queries_menu.cpp"
 using namespace std;
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Change_id_password
+**    DESCRIPTION     :    This function contains menu list for Change ID and Password having options
+**                         like Change Admin_id, Change Password
+**    RETURN          :    Success
+**
+*********************************************************************************************************/
 int Change_id_password()
 {
 	Change chg;
@@ -72,6 +91,13 @@ int Change_id_password()
 
 }
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Data_Maintainance
+**    DESCRIPTION     :    This function contains menu list for data maintainance like View,Modify,Delete.
+**    RETURN          :    Success
+**
+*********************************************************************************************************/
 int Data_Maintainance()
 {	
 	system("clear");
@@ -140,6 +166,14 @@ int Data_Maintainance()
 		return EXIT_SUCCESS;
 	}
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Reports
+**    DESCRIPTION     :    This function contains menu list for various reports like Age group report
+**                         ,Gender report, Report for farming population in country,etc
+**    RETURN          :    Success
+**
+*********************************************************************************************************/
 int Reports()
 {
 	Report r;
@@ -205,6 +239,14 @@ int Reports()
 		return EXIT_SUCCESS;
 	}
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    Queries
+**    DESCRIPTION     :    This function contains menu for queries having options like Literacy rate of Dyanaland,
+**			   Zone withe highest Literacy rate,Average income of below poverty line , etc
+**    RETURN          :    Success
+**
+*********************************************************************************************************/
 int Queries()
 {
 	Query q;

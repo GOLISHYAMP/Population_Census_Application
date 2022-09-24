@@ -1,8 +1,26 @@
+/************************************************************************************************************************************
+** FILENAME        : main.cpp
+** DESCRIPTION     : The main function contains the login details and password into list and for entering into main menue.
+**
+** REVISION HISTORY :  
+** DATE        NAME          REASON
+**--------------------------------------------------------------------------------------------------------------------------------------
+** 19 SEP      user1         creating of main function.
+**
+******************************************************************************************************************************************
+**/
 #include<iostream>
 #include<string>
 #include "main_menus.cpp"
 #include "file_handling.cpp"
 using namespace std;
+//-------------------main--------------------//
+/*************************************main*******************************************************************************************
+** FUNCTION NAME   :  main
+** DESCRIPTION     :  this function checks the login details like admin and password and also for entering into main menue
+** RETURN          :  void
+**
+*********************************************************************************************************************************************/
 
 
 int main()

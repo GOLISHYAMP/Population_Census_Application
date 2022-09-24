@@ -1,15 +1,33 @@
+/****************************************************************************************************
+**      FILENAME      :       validation_file.cpp
+**
+**    DESCRIPTION     :       This File contains all the function definitions that are used to check 
+**			      the validity of the data members of the class like ssid , name , age , 
+**			      gender, house type , etc.
+**
+** Revision History   :
+** DATE                NAME                   REASON
+**---------------------------------------------------------------------------------------------------
+**14 SEP 2022        cguser20            Creation of File , Writing Function definitions.
+**
+*******************************************************************************************************/
+
 #include<iostream>
 #include<iomanip>
 #include<cctype>
 #include<string>
 #include<regex>
+
 using namespace std;
 
-// SSID should be 9 digits, all only digits, 
-
-
-//--------------- SSID NUMBER  -----------------------//
-
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_ssid
+**    DESCRIPTION     :    This function checks that the SSID should not be blank and duplicate,
+**			   and the ssid shall be strictly integer values.
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_ssid(string ssid)
 {
 
@@ -42,6 +60,14 @@ int check_ssid(string ssid)
 
 //-------------------- checking Zone ID -----------------------
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_zoneid
+**    DESCRIPTION     :    This function checks that the zoneid should not be blank,
+**			   and the zoneid shall be strictly integer values.
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_zoneid(string zoneid)
 {
 
@@ -75,6 +101,14 @@ int check_zoneid(string zoneid)
 
 //----------------------- NAME -------------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_name
+**    DESCRIPTION     :    This function checks that the name should not be blank 
+**			   and it shall be character values only..
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_name(string name)
 {
 	
@@ -103,6 +137,14 @@ int check_name(string name)
 
 //------------------------AGE------------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_age
+**    DESCRIPTION     :    This function checks that the age should not be blank and,
+**			   and the age shall be strictly integer values in range 1-120 .
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 
 int check_age(string age)
 {
@@ -139,6 +181,15 @@ int check_age(string age)
 
 //------------------------GENDER----------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_gender
+**    DESCRIPTION     :    This function checks that the gender should not be blank,
+**			   and the gender shall be strictly character values like m/M for male
+                           and f/F for female adn t/T for transgender only..
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_gender(string gender)
 {
 	
@@ -170,6 +221,14 @@ int check_gender(string gender)
 
 //-------------------------ANNUAL INCOME-----------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_annual_income
+**    DESCRIPTION     :    This function checks that the annual income is not be blank,
+**			   and it shall be strictly integer values which is greater than 1000.
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 
 int check_annual_income(string annual_income)
 {
@@ -204,6 +263,14 @@ return 1;
 }
 //-----------------------------OCCUPATION------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_Occupation
+**    DESCRIPTION     :    This function checks that the occupation should not be blank and ,
+**			   it shall be strictly character values.
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_occupation(string occupation)
 {
 	
@@ -230,6 +297,14 @@ int check_occupation(string occupation)
 
 //--------------------------QUALIFICATION----------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_qualification
+**    DESCRIPTION     :    This function checks that the qualification should not be blank ,
+**			   and it shall accept only alphabets .
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_qualification(string qualification)
 {
 	
@@ -255,6 +330,14 @@ int check_qualification(string qualification)
 }
 //-------------------------HOUSETYPE-----------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_House_type
+**    DESCRIPTION     :    This function checks that the SSID should not be blank and it shall accept 
+**		      	   only o/O for own house and r/R for rented house,
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_house_type(string house_type)
 {
 	
@@ -288,6 +371,14 @@ int check_house_type(string house_type)
 
 //---------------------------NUMBER OF DEPENDENTS---------------------------/
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_dependants
+**    DESCRIPTION     :    This function checks that the number of dependents should not be blank 
+**			   and it shall be strictly integer values between range 1-20
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_dependants(string dependants)
 {
 	
@@ -319,6 +410,15 @@ int check_dependants(string dependants)
 }
 //----------------------------AREA TYPE--------------------------//
 
+/****************************************************************************************************
+**
+**    FUNCTION NAME   :    check_area_type
+**    DESCRIPTION     :    This function checks that the area type should not be blank ,
+**			   and the area type shall be strictly character values and only u/U 
+**                           for urban and r/R for rural is accepted. 
+**    RETURN          :    Returns 1 if successful . 
+**
+*********************************************************************************************************/
 int check_area_type(string area_type)
 {
 	
@@ -348,89 +448,5 @@ int check_area_type(string area_type)
 
 	return 1;
 }
-
-
-//------------------  END  -------------------------------------------------------//
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
-
-
-int check_Student_register_number(string register_number)
-{
-	if(register_number.length() != 6)
-	{
-		cout<<endl<<"Register Number length should be 6"<<endl;
-		return 0;
-	}
-	if( register_number[0] != 'U' || register_number[1] != 'S')
-	{
-		cout<<"First two characters of student register number should be US"<<endl;
-		return 0;
-	}
-	for(int i = 2; i<6; i++)
-	{
-		if(isdigit(register_number[i]) != 1)
-		{
-			cout<<"The last four characters should be integers"<<endl;
-			return 0;
-		}
-	}
-	return 1;
-}
-
-int check_number(string number)
-{
-	
-	for(int i = 0; i<number.length(); i++)
-	{
-		if(!isdigit(number[i]))
-		{
-			cout<<"The field should be only integers"<<endl;
-			return 0;
-		}
-	}
-	return 1;
-}
-
-int check_string(string s)
-{
-	
-	for(int i = 0; i<s.length(); i++)
-	{
-		if(!isalpha(s[i]))
-		{
-			cout<<"The field should be only alphabets"<<endl;
-			return 0;
-		}
-	}
-	return 1;
-}
-
-int check_length(string s, int size)
-{
-	if((s.length()<size) || (s.length()>size))
-	{
-		cout<<"This field should have length equal to "<<size<<endl;
-		return 0;
-	}
-	return 1;
-}
-
-*/
 
 
