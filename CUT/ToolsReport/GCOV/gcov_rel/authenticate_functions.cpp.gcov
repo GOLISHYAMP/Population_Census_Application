@@ -1,0 +1,49 @@
+        -:    0:Source:authenticate_functions.cpp
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    1:#include"class.hpp"
+        -:    2:#include<iostream>
+        -:    3:#include<string>
+        -:    4:using namespace std;
+        -:    5:
+function _ZN12Authenticate14create_accountENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEES5_ called 5 returned 100% blocks executed 100%
+        5:    6:int Authenticate::create_account(string id, string pwd)
+        -:    7:{
+        5:    8:	admin_id = id;
+call    0 returned 5
+        5:    9:	password = pwd;
+call    0 returned 5
+        5:   10:	return EXIT_SUCCESS;
+        -:   11:}
+        -:   12:
+function _ZN12Authenticate12get_admin_idB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   13:string Authenticate::get_admin_id()
+        -:   14:{
+        1:   15:	return admin_id;	
+call    0 returned 1
+        -:   16:}
+        -:   17:
+function _ZN12Authenticate12get_passwordB5cxx11Ev called 1 returned 100% blocks executed 100%
+        1:   18:string Authenticate::get_password()
+        -:   19:{
+        1:   20:	return password;
+call    0 returned 1
+        -:   21:}
+        -:   22:
+function _ZN12Authenticate12put_admin_idENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   23:int Authenticate::put_admin_id(string id)
+        -:   24:{
+    #####:   25:	admin_id = id;
+call    0 never executed
+    #####:   26:	return EXIT_SUCCESS;
+        -:   27:}
+        -:   28:
+function _ZN12Authenticate12put_passwordENSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEE called 0 returned 0% blocks executed 0%
+    #####:   29:int Authenticate::put_password(string pwd)
+        -:   30:{
+    #####:   31:	password = pwd;
+call    0 never executed
+    #####:   32:	return EXIT_SUCCESS;
+        -:   33:}
+        -:   34:
