@@ -1,0 +1,233 @@
+central_rel.cpp:28:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+central_rel.cpp:39:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+central_rel.cpp:63:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+central_rel.cpp:94:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+central_rel.cpp:105:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+central_rel.cpp:132:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+central_rel.cpp:162:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+central_rel.cpp:173:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+central_rel.cpp:199:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+central_rel.cpp:227:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+central_rel.cpp:238:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+central_rel.cpp:266:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+main_menus.cpp:30:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+main_menus.cpp:44:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+main_menus.cpp:96:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+main_menus.cpp:137:17: style: Exception should be caught by reference. [catchExceptionByValue]
+                catch(string a)
+                ^
+main_menus.cpp:151:17: style: Exception should be caught by reference. [catchExceptionByValue]
+                catch(string b)
+                ^
+main_menus.cpp:181:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+main_menus.cpp:254:17: style: Exception should be caught by reference. [catchExceptionByValue]
+                catch(string a)
+                ^
+main_menus.cpp:269:17: style: Exception should be caught by reference. [catchExceptionByValue]
+                catch(string b)
+                ^
+main_menus.cpp:285:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+main.cpp:33:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string a)
+  ^
+main.cpp:47:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string b)
+  ^
+main.cpp:75:3: style: Exception should be caught by reference. [catchExceptionByValue]
+  catch(string ch)
+  ^
+class_functions.cpp:14:7: style: The scope of the variable 'flag' can be reduced. [variableScope]
+  int flag = 0;
+      ^
+data_maintainance_menu.cpp:53:16: style: Local variable 'li' shadows outer variable [shadowVariable]
+  list<Citizen>li(temp);
+               ^
+class.hpp:45:15: note: Shadowed declaration
+list<Citizen> li;
+              ^
+data_maintainance_menu.cpp:53:16: note: Shadow variable
+  list<Citizen>li(temp);
+               ^
+central_rel.cpp:63:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+central_rel.cpp:13:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+central_rel.cpp:63:16: note: Shadow variable
+  catch(string ch)
+               ^
+central_rel.cpp:132:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+central_rel.cpp:79:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+central_rel.cpp:132:16: note: Shadow variable
+  catch(string ch)
+               ^
+central_rel.cpp:199:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+central_rel.cpp:147:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+central_rel.cpp:199:16: note: Shadow variable
+  catch(string ch)
+               ^
+central_rel.cpp:266:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+central_rel.cpp:212:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+central_rel.cpp:266:16: note: Shadow variable
+  catch(string ch)
+               ^
+main_menus.cpp:96:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+main_menus.cpp:13:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+main_menus.cpp:96:16: note: Shadow variable
+  catch(string ch)
+               ^
+main_menus.cpp:181:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+main_menus.cpp:120:10: note: Shadowed declaration
+  string ch = "a";
+         ^
+main_menus.cpp:181:16: note: Shadow variable
+  catch(string ch)
+               ^
+main.cpp:75:16: style: Local variable 'ch' shadows outer variable [shadowVariable]
+  catch(string ch)
+               ^
+main.cpp:14:9: note: Shadowed declaration
+ string ch = "a";
+        ^
+main.cpp:75:16: note: Shadow variable
+  catch(string ch)
+               ^
+authenticate_functions.cpp:6:41: performance: Function parameter 'id' should be passed by const reference. [passedByValue]
+int Authenticate::create_account(string id, string pwd)
+                                        ^
+authenticate_functions.cpp:6:52: performance: Function parameter 'pwd' should be passed by const reference. [passedByValue]
+int Authenticate::create_account(string id, string pwd)
+                                                   ^
+authenticate_functions.cpp:23:39: performance: Function parameter 'id' should be passed by const reference. [passedByValue]
+int Authenticate::put_admin_id(string id)
+                                      ^
+authenticate_functions.cpp:29:39: performance: Function parameter 'pwd' should be passed by const reference. [passedByValue]
+int Authenticate::put_password(string pwd)
+                                      ^
+class_functions.cpp:8:42: performance: Function parameter 'zid' should be passed by const reference. [passedByValue]
+void Citizen::Citizen_Data_Create(string zid)
+                                         ^
+class_functions.cpp:234:42: performance: Function parameter 'ch' should be passed by const reference. [passedByValue]
+void Citizen::Citizen_Data_Modify(string ch)
+                                         ^
+class_functions.cpp:449:39: performance: Function parameter 'id' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                      ^
+class_functions.cpp:449:50: performance: Function parameter 'cid' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                 ^
+class_functions.cpp:449:62: performance: Function parameter 'n' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                             ^
+class_functions.cpp:449:72: performance: Function parameter 'a' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                       ^
+class_functions.cpp:449:82: performance: Function parameter 'g' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                 ^
+class_functions.cpp:449:92: performance: Function parameter 'add' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                           ^
+class_functions.cpp:449:104: performance: Function parameter 'q' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                       ^
+class_functions.cpp:449:114: performance: Function parameter 'l' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                 ^
+class_functions.cpp:449:124: performance: Function parameter 'o' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                           ^
+class_functions.cpp:449:134: performance: Function parameter 'ai' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                                     ^
+class_functions.cpp:449:145: performance: Function parameter 'd' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                                                ^
+class_functions.cpp:449:155: performance: Function parameter 'h' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                                                          ^
+class_functions.cpp:449:165: performance: Function parameter 'at' should be passed by const reference. [passedByValue]
+void Citizen :: Initial_Create(string id, string cid, string n, string a, string g, string add, string q, string l, string o, string ai, string d, string h, string at)
+                                                                                                                                                                    ^
+queries_menu.cpp:137:4: error: Uninitialized variable: BPL [uninitvar]
+   BPL++;
+   ^
+queries_menu.cpp:138:4: error: Uninitialized variable: BPL_total_income [uninitvar]
+   BPL_total_income += stod(c.annual_income);
+   ^
+data_maintainance_menu.cpp:53:18: style: Variable 'li' is assigned a value that is never used. [unreadVariable]
+  list<Citizen>li(temp);
+                 ^
+queries_menu.cpp:129:9: style: Variable 'BPL' is not assigned a value. [unassignedVariable]
+ double BPL;
+        ^
+change_menu.cpp:18:71: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+   for(list<Authenticate> :: iterator a = aut.begin(); a!= aut.end(); a++)
+                                                                      ^
+change_menu.cpp:59:71: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+   for(list<Authenticate> :: iterator a = aut.begin(); a!= aut.end(); a++)
+                                                                      ^
+data_maintainance_menu.cpp:12:59: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+ for(list<Citizen> :: iterator c=li.begin(); c!=li.end(); c++)
+                                                          ^
+data_maintainance_menu.cpp:72:59: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+ for(list<Citizen> :: iterator c=li.begin(); c!=li.end(); c++)
+                                                          ^
+file_handling.cpp:156:61: performance: Prefer prefix ++/-- operators for non-primitive types. [postfixOperator]
+   for(list<Citizen> :: iterator c=li.begin(); c!=li.end(); c++)
+                                                            ^
+nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
+

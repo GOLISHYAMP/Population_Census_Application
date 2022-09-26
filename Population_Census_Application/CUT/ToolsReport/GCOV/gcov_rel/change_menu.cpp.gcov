@@ -1,0 +1,364 @@
+        -:    0:Source:change_menu.cpp
+        -:    0:Graph:main.gcno
+        -:    0:Data:main.gcda
+        -:    0:Runs:1
+        -:    1:#include "class.hpp"
+        -:    2:#include <iostream>
+        -:    3:#include<string>
+        -:    4:using namespace std;
+        -:    5:
+        -:    6:class Change : public Authenticate
+        -:    7:{
+        -:    8:	public:
+function _ZN6Change9Change_idEv called 0 returned 0% blocks executed 0%
+    #####:    9:		int Change_id()
+        -:   10:		{
+    #####:   11:			string id;
+call    0 never executed
+    #####:   12:			string pwd;
+call    0 never executed
+    #####:   13:			system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   14:			cout<<endl<<endl<<"****************** Changing Admin ID *******************"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    #####:   15:			cout<<"Enter Admin ID : "<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   16:			cin>>id;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   17:			//for(Authenticate a : aut)
+    #####:   18:			for(list<Authenticate> :: iterator a = aut.begin(); a!= aut.end(); a++)
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   19:			{
+    #####:   20:				if(a->get_admin_id() == id)
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:   21:				{
+    #####:   22:					cout<<"Enter Password : "<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   23:					cin>>pwd;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   24:					if(a->get_password() == pwd)
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:   25:					{
+    #####:   26:						string new_id;
+call    0 never executed
+    #####:   27:						cout<<"Enter New Admin ID to change"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   28:						cin>>new_id;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   29:						a->put_admin_id(new_id);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   30:						cout<<endl<<"Admin ID changed Successfully!"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   31:						system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   32:						system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   33:						return EXIT_SUCCESS;
+    #####:   34:					}
+call    0 never executed
+call    1 never executed
+        -:   35:					else
+        -:   36:					{
+    #####:   37:						cout<<"Invalid Password!"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   38:						system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   39:						system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   40:						return EXIT_FAILURE;
+        -:   41:					}
+        -:   42:				}
+        -:   43:			}
+    #####:   44:			cout<<endl<<"Invalid Admin_ID"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   45:			system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   46:			system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   47:			return EXIT_FAILURE;
+        -:   48:
+    #####:   49:		}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+function _ZN6Change15Change_passwordEv called 0 returned 0% blocks executed 0%
+    #####:   50:		int Change_password()
+        -:   51:		{
+    #####:   52:			string id;
+call    0 never executed
+    #####:   53:                        string pwd;
+call    0 never executed
+    #####:   54:                        system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   55:                        cout<<endl<<endl<<"****************** Changing Password *******************"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+call   12 never executed
+branch 13 never executed
+branch 14 never executed
+    #####:   56:                        cout<<"Enter Admin ID : "<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   57:                        cin>>id;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+        -:   58:                        //for(Authenticate a : aut)
+    #####:   59:			for(list<Authenticate> :: iterator a = aut.begin(); a!= aut.end(); a++)
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+        -:   60:                        {
+    #####:   61:                                if(a->get_admin_id() == id)
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:   62:                                {
+    #####:   63:                                        cout<<"Enter previous password : "<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   64:                                        cin>>pwd;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   65:                                        if(a->get_password() == pwd)
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+call    5 never executed
+branch  6 never executed
+branch  7 never executed
+        -:   66:                                        {
+    #####:   67:						string new_pwd;
+call    0 never executed
+    #####:   68:                                                cout<<"Enter New password to change"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   69:                                                cin>>new_pwd;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   70:						a->put_password(new_pwd);
+call    0 never executed
+call    1 never executed
+branch  2 never executed
+branch  3 never executed
+call    4 never executed
+branch  5 never executed
+branch  6 never executed
+call    7 never executed
+call    8 never executed
+    #####:   71:                                                cout<<endl<<"Password changed Successfully!"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   72:						system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   73:						system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   74:                                                return EXIT_SUCCESS;
+    #####:   75:                                        }
+call    0 never executed
+call    1 never executed
+        -:   76:                                        else
+        -:   77:                                        {
+    #####:   78:                                                cout<<"Invalid Password!"<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+    #####:   79:						system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   80:						system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   81:                                                return EXIT_FAILURE;
+        -:   82:                                        }
+        -:   83:                                }
+        -:   84:                        }
+    #####:   85:                        cout<<endl<<"Invalid Admin_ID"<<endl<<endl;
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+call    3 never executed
+branch  4 never executed
+branch  5 never executed
+call    6 never executed
+branch  7 never executed
+branch  8 never executed
+call    9 never executed
+branch 10 never executed
+branch 11 never executed
+    #####:   86:                        system("read n");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   87:                        system("clear");
+call    0 never executed
+branch  1 never executed
+branch  2 never executed
+    #####:   88:                        return EXIT_FAILURE;
+        -:   89:
+        -:   90:
+    #####:   91:		}
+call    0 never executed
+call    1 never executed
+call    2 never executed
+call    3 never executed
+        -:   92:};
